@@ -2,7 +2,18 @@ spring.devtools.livereload.enabled: false
 
 ---
 spring:
-    profiles: production
+  datasource:
+    platform: postgres
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/two
+    username: user
+    password: password
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
 
 # TODO: add the credentials to your production redis
 # preferably using environment variables

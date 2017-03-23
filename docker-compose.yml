@@ -11,3 +11,12 @@ redis:
   hostname: redis
   ports:
     - "6379:6379"
+
+postgres:
+  image: postgres:9.1
+  environment:
+    - POSTGRES_USER=user
+    - POSTGRES_PASSWORD=password
+    - POSTGRES_DB=two
+  ports:
+    - "5432:5432"
